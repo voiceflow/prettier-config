@@ -41,7 +41,7 @@
     "url": "git+https://github.com/storyflow/prettier-config.git"
   },
   "scripts": {
-    "postinstall": "fixpack",
+    "prepare": "fixpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   }
 }
