@@ -1,16 +1,24 @@
+version: 2.1
+
+orbs:
+  vfcommon: voiceflow/common@0.0.52
+
 jobs:
-  release:
-    docker:
-      - image: node:11
+  build-and-test:
+    executor: vfcommon/default-executor
     steps:
       - checkout
-      - run: npm i -g semantic-release@15
-      - run: semantic-release
+      - vfcommon/install_node_modules
+
 workflows:
-  version: 2
-  test-and-build:
+  test-and-release:
     jobs:
-      - release:
+      - build-and-test:
+          context: dev-test
+      - vfcommon/release:
+          context: dev-test
+          requires:
+            - build-and-test
           filters:
             branches:
               only: master
