@@ -1,7 +1,7 @@
 version: 2.1
 
 orbs:
-  vfcommon: voiceflow/common@0.0.52
+  vfcommon: voiceflow/common@0.0.54
 
 jobs:
   build-and-test:
@@ -9,7 +9,8 @@ jobs:
     steps:
       - checkout
       - vfcommon/install_node_modules
-
+      - vfcommon/lint_source
+      
 workflows:
   test-and-release:
     jobs:
