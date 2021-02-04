@@ -1578,14 +1578,6 @@ eslint-plugin-lodash@^5.1.0:
   dependencies:
     lodash "^4.17.15"
 
-eslint-plugin-mocha@^6.2.2:
-  version "6.3.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-mocha/-/eslint-plugin-mocha-6.3.0.tgz#72bfd06a5c4323e17e30ef41cd726030e8cdb8fd"
-  integrity sha512-Cd2roo8caAyG21oKaaNTj7cqeYRWW1I2B5SfpKRp0Ip1gkfwoR1Ow0IGlPWnNjzywdF4n+kHL8/9vM6zCJUxdg==
-  dependencies:
-    eslint-utils "^2.0.0"
-    ramda "^0.27.0"
-
 eslint-plugin-mocha@^7.0.0:
   version "7.0.1"
   resolved "https://registry.yarnpkg.com/eslint-plugin-mocha/-/eslint-plugin-mocha-7.0.1.tgz#b2e9e8ebef7836f999a83f8bab25d0e0c05f0d28"
@@ -1640,7 +1632,7 @@ eslint-plugin-react@^7.13.0:
     resolve "^1.18.1"
     string.prototype.matchall "^4.0.2"
 
-eslint-plugin-simple-import-sort@^5.0.0, eslint-plugin-simple-import-sort@^5.0.3:
+eslint-plugin-simple-import-sort@^5.0.3:
   version "5.0.3"
   resolved "https://registry.yarnpkg.com/eslint-plugin-simple-import-sort/-/eslint-plugin-simple-import-sort-5.0.3.tgz#9ae258ddada6efffc55e47a134afbd279eb31fc6"
   integrity sha512-1rf3AWiHeWNCQdAq0iXNnlccnH1UDnelGgrPbjBBHE8d2hXVtOudcmy0vTF4hri3iJ0MKz8jBhmH6lJ0ZWZLHQ==
