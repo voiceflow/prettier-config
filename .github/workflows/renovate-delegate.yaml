@@ -6,14 +6,8 @@ on:
     types: [created, edited, deleted]
 
 jobs:
-  test:
-    runs-on: ubuntu-latest
-    steps:
-      - name: a
-        run: echo ${{ github.event }}
-
   service-account-merge:
-    if: ${{ contains( github.event.comment.body, 'service-account merge') }} #&& github.event.issue.pull_request && github.actor != 'renovate[bot]' }}
+    if: ${{ contains( github.event.comment.body, 'service-account merge') && github.event.issue.pull_request && github.actor == 'renovate[bot]' }}
     name: Service Account Merge 
     runs-on: ubuntu-latest
     steps:
@@ -22,3 +16,4 @@ jobs:
         with:
           message: bors merge
           GITHUB_TOKEN: ${{ secrets.GH_SA_TOKEN }}
+          pr_number: ${{ github.event.issue.number }}
