@@ -1,5 +1,5 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": ["github>voiceflow/renovate-config:integrations"],
-  "automergeComment": "serice-account merge" 
+  "automergeComment": "service-account merge" 
 }
