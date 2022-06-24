@@ -3,7 +3,7 @@ name: Renovatebot Bors Merge
 
 on:
   issue_comment:
-    types: [created, edited]
+    types: [created, edited, deleted]
 
 jobs:
   test:
