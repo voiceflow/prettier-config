@@ -1,8 +1,9 @@
 # Merge using service account when renovate automerges
 name: Renovatebot Bors Merge
+
 on:
   issue_comment:
-    types: [created]
+    types: [created, edited]
 
 jobs:
   test:
@@ -12,7 +13,7 @@ jobs:
         run: echo ${{ github.event }}
 
   service-account-merge:
-    if: ${{ contains(github.event.comment.body, 'service-account merge') }} #&& github.event.issue.pull_request && github.actor != 'renovate[bot]' }}
+    if: ${{ contains( github.event.comment.body, 'service-account merge') }} #&& github.event.issue.pull_request && github.actor != 'renovate[bot]' }}
     name: Service Account Merge 
     runs-on: ubuntu-latest
     steps:
