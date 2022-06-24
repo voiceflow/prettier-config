@@ -6,7 +6,7 @@ on:
 
 jobs:
   service-account-merge:
-    if: ${{ contains(github.event.comment, 'service-account merge') && github.event.issue.pull_request && github.actor != 'renovate[bot]' }}
+    if: ${{ contains(github.event.comment, 'service-account merge') }} #&& github.event.issue.pull_request && github.actor != 'renovate[bot]' }}
     name: Service Account Merge 
     runs-on: ubuntu-latest
     steps:
