@@ -5,6 +5,12 @@ on:
     types: [created]
 
 jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: a
+        run: echo ${{ github.event }}
+
   service-account-merge:
     if: ${{ contains(github.event.comment, 'service-account merge') }} #&& github.event.issue.pull_request && github.actor != 'renovate[bot]' }}
     name: Service Account Merge 
