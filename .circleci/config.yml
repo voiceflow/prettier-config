@@ -1,7 +1,7 @@
 version: 2.1
 
 orbs:
-  vfcommon: voiceflow/common@0.0.246
+  vfcommon: voiceflow/common@0.38.10
 
 jobs:
   build-and-test:
@@ -14,7 +14,6 @@ jobs:
           step_name: Dependency Tests
 
 workflows:
-
   test-and-release:
     jobs:
       - build-and-test:
