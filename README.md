@@ -1,3 +1,7 @@
+> [!CAUTION]
+> This library has been [moved here](https://github.com/voiceflow/toolchain/tree/master/libs/prettier-config).
+
+
 # prettier-config
 Prettier config
 
